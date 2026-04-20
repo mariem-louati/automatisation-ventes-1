@@ -23,6 +23,7 @@ automatisation-ventes/
 │
 ├── ventes.csv
 ├── vente.py
+├── app.py
 ├── resultats_final.csv
 ├── requirements.txt
 ├── image.png
@@ -30,21 +31,25 @@ automatisation-ventes/
 └── README.md
 ```
 ## 🌐 Cloner le projet (GitHub)
-Le projet est disponible sur GitHub et peut être cloné pour exécution locale.
+Le projet est disponible sur GitHub et peut être cloné pour une exécution locale.
 
-Pour télécharger le projet :
-
-```
-git clone https://github.com/naaaaaaaazz/automatisation-ventes
-```
-
-Accéder au dossier :
+## Prérequis : Configuration de Git
+Avant de commencer, configurez votre identité Git :
 
 ```
-cd automatisation-ventes
+git config --global user.name "Votre Nom"
+git config --global user.email "votre-email@exemple.com"
 ```
-
----
+### Étapes pour récupérer le projet avec VS Code
+1. Ouvrir Visual Studio Code
+2. Appuyer sur `Ctrl + Shift + P`
+3. Taper : Git: Clone
+4. Coller l’URL du dépôt GitHub :
+```
+https://github.com/naaaaaaaazz/automatisation-ventes 
+```
+5. Choisir un dossier de destination sur votre ordinateur
+6. Cliquer sur Open pour ouvrir le projet dans VS Code
 
 ## ▶️ Installation et exécution
 Le projet est disponible sur GitHub et peut être cloné pour exécution locale.
@@ -115,6 +120,42 @@ Le script affiche un graphique en barres des ventes (chiffre d’affaires net pa
   <img src="Figure_1.png" width="500">
 </p>
 
+## 🌐 Dashboard interactif (Streamlit)
+
+En complément du script Python, une interface graphique a été développée avec **Streamlit** afin de rendre l’analyse des ventes plus simple, rapide et interactive.
+
+Ce dashboard fonctionne comme une **application web locale**, accessible via un navigateur.
+
+---
+
+### ⚙️ Fonctionnalités du dashboard
+
+- 📥 Importation d’un fichier CSV depuis l’interface  
+- 📊 Affichage des données sous forme de tableau  
+- 📈 Visualisation graphique du chiffre d’affaires net  
+- 📌 Affichage des indicateurs clés (KPI) :
+  - Chiffre d’affaires total  
+  - Nombre de produits  
+  - Meilleur produit  
+- 🏆 Identification automatique du produit le plus rentable  
+- 📤 Téléchargement des résultats au format CSV  
+
+---
+
+### ▶️ Lancer le dashboard
+
+Après installation des dépendances :
+
+```
+streamlit run app.py
+``` 
+### 📸 Aperçu du dashboard
+
+💡 Capture d’écran après importation du fichier CSV et affichage des résultats
+<p align="center">
+  <img src="apercudashboard.png" width="500">
+</p>
+
 ## 📤 Fichier de sortie
 
 Le fichier resultats_final.csv contient :
@@ -129,7 +170,8 @@ Le fichier resultats_final.csv contient :
 * Gestion d’environnement virtuel (venv)
 * Utilisation de VS Code
 * Débogage (Debug)
-* Versioning avec Git
+* Développement d’interface web (Streamlit)
+* Git & GitHub
 
 ## ⭐ Bonus réalisés
 
@@ -154,10 +196,10 @@ git commit -m "Projet final"
 
 Projet réalisé en collaboration.
 
-## 🛑 Remarque
 
-Assurez-vous que le fichier ventes.csv est présent dans le même dossier que le script Python avant l’exécution.
-Si vous avez cloné le projet via GitHub, tous les fichiers sont déjà correctement organisés.
+## 🎯 Conclusion
 
+Ce projet permet d’automatiser l’analyse des données de ventes et de fournir une visualisation claire et interactive grâce à un dashboard développé avec Streamlit.
 
+Il améliore la prise de décision en entreprise en réduisant le temps de traitement manuel et en facilitant l’interprétation des données.
 
