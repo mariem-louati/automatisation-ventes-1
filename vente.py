@@ -107,17 +107,3 @@ with open("resultats_final.csv", "w", newline="") as fichier_sortie:
     for ligne in resultats:
         ecrivain.writerow(ligne)
 # --- Graphique 2 : Camembert ---
-axes[1].pie(
-    valeurs,
-    labels=[f"ID {p}" for p in produits],
-    autopct="%1.1f%%",
-    startangle=140,
-)
-axes[1].set_title("Répartition du CA Net")
-
-plt.tight_layout()
-plt.savefig("graphiques_ventes.png")
-plt.show()
-plt.close()
-
-print("📈 Graphiques sauvegardés dans 'graphiques_ventes.png' !")
