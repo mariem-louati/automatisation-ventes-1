@@ -107,3 +107,21 @@ with open("resultats_final.csv", "w", newline="") as fichier_sortie:
     for ligne in resultats:
         ecrivain.writerow(ligne)
 # --- Graphique 2 : Camembert ---
+# création du graphique circulaire
+plt.figure(figsize=(19,8))
+
+plt.pie(
+    ca_nets,                # données (CA Net)
+    labels=ids,             # noms des produits
+    autopct='%1.1f%%',      # affichage en pourcentage
+    startangle=90           # rotation pour meilleure lecture
+)
+
+# titre
+plt.title("Répartition du chiffre d'affaires net par produit",fontsize=20)
+
+# cercle parfait
+plt.axis('equal')
+
+# affichage
+plt.show()
